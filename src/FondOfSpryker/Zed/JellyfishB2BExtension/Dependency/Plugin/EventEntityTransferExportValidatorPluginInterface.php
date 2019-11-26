@@ -3,17 +3,18 @@
 namespace FondOfSpryker\Zed\JellyfishB2BExtension\Dependency\Plugin;
 
 use Generated\Shared\Transfer\EventEntityTransfer;
+use Generated\Shared\Transfer\JellyfishEventEntityTransfer;
 
-interface EventEntityTransferExportPreCheckPluginInterface
+interface EventEntityTransferExportValidatorPluginInterface
 {
     /**
      * Specification:
-     * - Executes checks before the process of exporting the event entity transfer object has started.
+     * - Validates if the event is allowed to be exported
      *
      * @api
      *
      * @param \Generated\Shared\Transfer\EventEntityTransfer $eventEntityTransfer
      * @return bool
      */
-    public function check(EventEntityTransfer $eventEntityTransfer): bool;
+    public function validate(EventEntityTransfer $eventEntityTransfer): bool;
 }

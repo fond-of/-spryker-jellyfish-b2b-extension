@@ -3,7 +3,6 @@
 namespace FondOfSpryker\Zed\JellyfishB2BExtension\Dependency\Plugin;
 
 use Generated\Shared\Transfer\EventEntityTransfer;
-use Generated\Shared\Transfer\JellyfishEventEntityTransfer;
 
 interface EventEntityTransferExportValidatorPluginInterface
 {
@@ -14,6 +13,7 @@ interface EventEntityTransferExportValidatorPluginInterface
      * @api
      *
      * @param \Generated\Shared\Transfer\EventEntityTransfer $eventEntityTransfer
+     *
      * @return bool
      */
     public function validate(EventEntityTransfer $eventEntityTransfer): bool;
